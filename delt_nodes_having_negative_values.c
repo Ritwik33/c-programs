@@ -127,5 +127,7 @@ int main(){
     printf("\nThe Linked List after deletion of all negative values is:\n");
     display(start);
 
+    getch();
+
     return 0;
 }
