@@ -70,18 +70,18 @@ void display(node *start){
 node *delt_negatives(node *start){
 
     node *ptr,*preptr,*temp;
-    ptr=start;
+    ptr=start->next;
 
     while(ptr->next!=NULL){
 
-        if(start->val<0){
+        if(start->next->val<0){
 
-            temp=start;
-            start=start->next;
+            temp=start->next;
+            start->next=start->next->next;
 
             free(temp);
 
-            ptr=start;
+            ptr=start->next;
             preptr=ptr;
 
             ptr=ptr->next;
